@@ -1,0 +1,281 @@
+body {
+    background: linear-gradient(to bottom, #e27396, #ff9a9e, #fad0c4);
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    padding: 0;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 16px 64px;
+    position: relative;
+}
+
+
+.enlaces {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    transition: all 0.5s ease; 
+}
+
+.enlaces li {
+    margin-left: 24px;
+}
+
+.enlaces a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    padding: 8px 24px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.enlaces a:hover {
+    background-color:#e61658;
+}
+
+.iconos {
+    width: 90px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    margin-left: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.linea {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0px;
+    transition: all 0.3s ease;
+}
+
+#menu {
+    display: none;
+}
+
+@media(max-width: 720px) {
+    .navbar {
+        padding: 16px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .iconos {
+        display: flex;
+    }
+
+    .enlaces {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        background-color: #e27396;
+        border-radius: 10px;
+        text-align: center;
+        transition: max-height 0.5s ease-in-out;
+    }
+
+    .enlaces li {
+        margin: 0;
+        padding: 20px 0px;
+        width: 100%;
+    }
+
+    .enlaces a {
+        width: 100%;
+        padding: 10px 10px;
+    }
+
+    #menu:checked + .iconos + .enlaces {
+        max-height: 300px;
+    }
+
+    #menu:checked + .iconos .linea:nth-child(1) {
+        transform: rotate(45deg) translate(15px, 3px);
+    }
+
+    #menu:checked + .iconos .linea:nth-child(2) {
+        transform: scale(0);
+    }
+
+    #menu:checked + .iconos .linea:nth-child(3) {
+        transform: rotate(-45deg) translate(11px, -4px);
+    }
+}
+
+h1{
+    text-align: center;
+    font-family: "Cedarville Cursive", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2{
+    text-align: center;
+}
+
+.carrito {
+    background-color: #e27396; /* Color llamativo */
+    color: rgb(241, 238, 238);
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.carrito-precio{
+    color: white ;
+}
+
+.card{
+    color: #e61658 ;
+}
+
+ul {
+    display: flex; /* Poner las imágenes en línea */
+    flex-wrap: wrap; /* Permitir que bajen a otra fila si no caben */
+    justify-content: center; /* Centrar las imágenes horizontalmente */
+    gap: 10px; /* Espaciado entre tarjetas */
+    padding: 0;
+    list-style: none; /* Quitar los puntos de la lista */
+
+}
+
+ul a {
+    background: #ff9a9e;
+}
+
+ul li {
+    margin: 9px; /* Espacio entre imágenes */
+    text-align: center;
+}
+
+#tonico {
+    transform: scale(20.0);
+    text-align: center;
+}
+
+ul li.pp {
+    background: #ff9a9e
+    ; /* Fondo blanco para cada producto */
+    border: 2px solid #e27396; /* Borde con color */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 15px; /* Espaciado interno */
+    margin: 15px; /* Espaciado entre productos */
+    text-align: center; /* Centrar el contenido */
+    width: 180px; /* Ancho fijo para cada producto */
+}
+
+
+
+
+p{
+    font-weight: bold;
+    text-align: center;
+}
+
+ul li img {
+    width: 100px; /* Tamaño de la imagen */
+    margin-bottom: 10px; /* Espaciado debajo de la imagen */
+}
+
+ul li button {
+    background-color: #ff9a9e; /* Color del botón */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+ul li button:hover {
+    background-color: #e61658; /* Cambio de color al pasar el mouse */
+}
+
+
+/* Estilo para el label (botón de texto para mostrar/ocultar) */
+#toggleTableLabel {
+    background-color: #ff9a9e;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+#toggleTableLabel:hover {
+    background-color: #e61658;
+}
+
+/* Ocultar la tabla por defecto */
+#priceTable {
+    display: none;
+    width: 95%;
+    margin-top: 10px;
+    border-radius: collapse;
+}
+
+td{
+    border: 2px solid black;
+}
+th{     
+    border: 2px solid black;
+}
+
+td {
+    border: 2px solid black;
+}
+th {     
+    border: 2px solid black;
+}
+
+#priceTable {
+    display: none;
+    width: 95%;
+    margin-top: 10px;
+    border-collapse: collapse; /* Asegura que los bordes no se dupliquen */
+}
+
+#priceTable, th, td {
+    border: 2px solid black;
+    text-align: center;
+    padding: 10px;
+}
+
+
+/* Mostrar la tabla cuando el checkbox esté marcado */
+#toggleTable:checked + #toggleTableLabel + #priceTable {
+    display: table;
+    text-align: center;
+}
+

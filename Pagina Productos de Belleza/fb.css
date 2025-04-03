@@ -1,0 +1,16 @@
+body {
+    background: linear-gradient(to bottom, #e27396, #ff9a9e, #fad0c4);
+    margin: 10px;
+    padding: 0;
+    min-height: 100vh;
+}
+main{
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+
+p{
+    text-transform:uppercase;
+}

@@ -1,0 +1,77 @@
+body {
+    background: linear-gradient(to bottom, #e27396, #ff9a9e, #fad0c4);
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    padding: 0;
+}
+
+header{
+    text-decoration:solid;
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+nav {
+    display: flex; /* Poner las imágenes en línea */
+    flex-wrap: wrap; /* Permitir que bajen a otra fila si no caben */
+    justify-content: center; /* Centrar las imágenes horizontalmente */
+    gap: 10px; /* Espaciado entre tarjetas */
+    padding: 0;
+    list-style: none; /* Quitar los puntos de la lista */
+}
+
+nav a {
+    margin: 90px; /* Espacio entre imágenes */
+    text-align: center;
+}
+
+section img {
+    width: 250px; /* Ajustar el tamaño de las imágenes */
+}
+
+nav a {
+    background: #ff9a9e
+    ; /* Fondo blanco para cada producto */
+    border: 2px solid #e27396; /* Borde con color */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 15px; /* Espaciado interno */
+    margin: 15px; /* Espaciado entre productos */
+    text-align: center; /* Centrar el contenido */
+    width: 180px; /* Ancho fijo para cada producto */
+}
+
+.Contenedor {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente (si tiene altura definida) */
+}
+
+form button {
+    background-color: palevioletred; /* Color del botón */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form{
+    text-align: center;
+}
+
+form button:hover {
+    background-color: #e61658; /* Cambio de color al pasar el mouse */
+}
+
+p{
+    font-weight: bold;
+    text-align: center;
+}
